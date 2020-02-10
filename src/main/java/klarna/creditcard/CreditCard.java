@@ -19,11 +19,15 @@ public class CreditCard {
     }
 
     private String lastUnmaskedCharacters() {
-        return number.substring(number.length() - 4);
+        return number.substring(maskEndPosition());
+    }
+
+    private int maskEndPosition() {
+        return number.length() - 4;
     }
 
     private String charactersToMask() {
-        return number.substring(1, number.length() - 4);
+        return number.substring(1, maskEndPosition());
     }
 
     private String maskDigitsIn(String text) {

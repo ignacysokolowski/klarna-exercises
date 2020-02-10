@@ -14,4 +14,9 @@ public class CreditCardTest {
     public void doesNotMaskNumbersShorterThanSix() {
         assertEquals("12345", CreditCard.maskify("12345"));
     }
+
+    @Test
+    public void masksAllDigitsExceptForFirstAndLastFourCharacters() {
+        assertEquals("1#3456", CreditCard.maskify("123456"));
+    }
 }

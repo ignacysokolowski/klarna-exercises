@@ -31,7 +31,7 @@ public class CreditCard {
     }
 
     private String maskDigitsIn(String text) {
-        return text.replaceAll(".", "#");
+        return text.replaceAll("\\d", "#");
     }
 
     public static String maskify(String creditCardNumber) {

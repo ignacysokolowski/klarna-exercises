@@ -22,4 +22,9 @@ public class CreditCardTest {
         assertEquals("1#6789", CreditCard.maskify("126789"));
         assertEquals("1##3456", CreditCard.maskify("1233456"));
     }
+
+    @Test
+    public void masksOnlyDigits() {
+        assertEquals("1#A#-#3456", CreditCard.maskify("12A3-13456"));
+    }
 }

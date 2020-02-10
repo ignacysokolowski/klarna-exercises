@@ -9,4 +9,9 @@ public class CreditCardTest {
     public void doesNotMaskEmptyString() {
         assertEquals("", CreditCard.maskify(""));
     }
+
+    @Test
+    public void doesNotMaskNumbersShorterThanSix() {
+        assertEquals("12345", CreditCard.maskify("12345"));
+    }
 }

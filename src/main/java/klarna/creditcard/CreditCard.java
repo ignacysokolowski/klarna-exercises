@@ -23,7 +23,11 @@ public class CreditCard {
     }
 
     private String maskDigits() {
-        return number.substring(1, number.length() - 4).replaceAll(".", "#");
+        return charactersToMask().replaceAll(".", "#");
+    }
+
+    private String charactersToMask() {
+        return number.substring(1, number.length() - 4);
     }
 
     public static String maskify(String creditCardNumber) {

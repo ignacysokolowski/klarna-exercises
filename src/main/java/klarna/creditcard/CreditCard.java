@@ -19,7 +19,7 @@ public class CreditCard {
     }
 
     private String lastUnmaskedCharacters() {
-        return "3456";
+        return number.substring(number.length() - 4);
     }
 
     private String maskDigits() {

@@ -35,7 +35,6 @@ public class CreditCard {
     }
 
     public static String maskify(String creditCardNumber) {
-        CreditCard card = new CreditCard(creditCardNumber);
-        return card.maskify();
+        return new CreditCard(creditCardNumber).maskify();
     }
 }

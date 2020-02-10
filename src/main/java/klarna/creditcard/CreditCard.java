@@ -11,7 +11,11 @@ public class CreditCard {
         if (number.length() < 6) {
             return number;
         }
-        return "1#3456";
+        return firstCharacter() + "#3456";
+    }
+
+    private String firstCharacter() {
+        return "1";
     }
 
     public static String maskify(String creditCardNumber) {

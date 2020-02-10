@@ -11,10 +11,10 @@ public class CreditCard {
         if (number.length() < 6) {
             return number;
         }
-        return firstCharacter() + maskDigitsIn(charactersToMask()) + lastUnmaskedCharacters();
+        return firstCharacterUnmasked() + maskDigitsIn(charactersToMask()) + lastCharactersUnmasked();
     }
 
-    private String firstCharacter() {
+    private String firstCharacterUnmasked() {
         return number.substring(0, 1);
     }
 
@@ -22,7 +22,7 @@ public class CreditCard {
         return number.substring(1, maskEndPosition());
     }
 
-    private String lastUnmaskedCharacters() {
+    private String lastCharactersUnmasked() {
         return number.substring(maskEndPosition());
     }
 

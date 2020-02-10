@@ -15,7 +15,7 @@ public class CreditCard {
     }
 
     private String firstCharacter() {
-        return "1";
+        return number.substring(0, 1);
     }
 
     private String lastUnmaskedCharacters() {

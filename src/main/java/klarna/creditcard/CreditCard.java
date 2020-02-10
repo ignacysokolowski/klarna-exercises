@@ -11,7 +11,7 @@ public class CreditCard {
         if (number.length() < 6) {
             return number;
         }
-        return firstCharacter() + "#" + lastUnmaskedCharacters();
+        return firstCharacter() + maskDigits() + lastUnmaskedCharacters();
     }
 
     private String firstCharacter() {
@@ -20,6 +20,10 @@ public class CreditCard {
 
     private String lastUnmaskedCharacters() {
         return "3456";
+    }
+
+    private String maskDigits() {
+        return "#";
     }
 
     public static String maskify(String creditCardNumber) {

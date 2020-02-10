@@ -22,12 +22,12 @@ public class CreditCard {
         return number.substring(number.length() - 4);
     }
 
-    private String maskDigits(String text) {
-        return text.replaceAll(".", "#");
-    }
-
     private String charactersToMask() {
         return number.substring(1, number.length() - 4);
+    }
+
+    private String maskDigits(String text) {
+        return text.replaceAll(".", "#");
     }
 
     public static String maskify(String creditCardNumber) {

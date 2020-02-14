@@ -8,25 +8,19 @@ public class Challenge {
         String suffix;
         if (number == 1) {
             suffix = "st";
-            return number + suffix;
         } else if (number == 2) {
             suffix = "nd";
-            return number + suffix;
         } else if (number == 3) {
             suffix = "rd";
-            return number + suffix;
         } else if (number == 21) {
             suffix = "st";
-            return number + suffix;
         } else if (number == 31) {
             suffix = "st";
-            return number + suffix;
         } else if (number == 22) {
             suffix = "nd";
-            return number + suffix;
         } else {
             suffix = "th";
-            return number + suffix;
         }
+        return number + suffix;
     }
 }

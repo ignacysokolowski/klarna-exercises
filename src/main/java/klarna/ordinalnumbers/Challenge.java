@@ -9,13 +9,17 @@ public class Challenge {
     }
 
     private static String suffixFor(int number) {
-        if (number == 11 || number == 12 || number == 13) {
+        String suffix = onesPlaceValueBasedSuffixFor(number);
+        if (suffix == null) {
             return "th";
         }
-        return onesPlaceValueBasedSuffixFor(number);
+        return suffix;
     }
 
     private static String onesPlaceValueBasedSuffixFor(int number) {
+        if (number == 11 || number == 12 || number == 13) {
+            return null;
+        }
         switch (onesPlaceValueOf(number)) {
             case 1:
                 return "st";
@@ -24,7 +28,7 @@ public class Challenge {
             case 3:
                 return "rd";
             default:
-                return "th";
+                return null;
         }
     }
 

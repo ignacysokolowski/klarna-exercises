@@ -48,6 +48,11 @@ public class OrdinalNumbersTest {
     }
 
     @Test
+    public void appendsNdToNumbersEndingWithTwo() {
+        assertEquals("22nd", Challenge.numberToOrdinal(22));
+    }
+
+    @Test
     public void doesNotConvertZero() {
         assertEquals("0", Challenge.numberToOrdinal(0));
     }

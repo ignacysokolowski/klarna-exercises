@@ -17,6 +17,9 @@ public class Challenge {
         if (number == 21) {
             return "21st";
         }
+        if (number == 22) {
+            return "22nd";
+        }
         return number + "th";
     }
 }

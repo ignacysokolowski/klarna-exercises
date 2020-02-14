@@ -11,7 +11,8 @@ public class Challenge {
     private static String suffixFor(int number) {
         if (number == 11 || number == 12 || number == 13) {
             return "th";
-        } else if (hasOnesPlaceValue(1, number)) {
+        }
+        if (hasOnesPlaceValue(1, number)) {
             return "st";
         } else if (hasOnesPlaceValue(2, number)) {
             return "nd";

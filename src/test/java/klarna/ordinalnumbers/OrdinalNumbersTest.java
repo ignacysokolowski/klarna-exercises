@@ -22,6 +22,11 @@ public class OrdinalNumbersTest {
     }
 
     @Test
+    public void convertsFour() {
+        assertEquals("4th", Challenge.numberToOrdinal(4));
+    }
+
+    @Test
     public void doesNotConvertZero() {
         assertEquals("0", Challenge.numberToOrdinal(0));
     }

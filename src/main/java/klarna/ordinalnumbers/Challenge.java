@@ -11,6 +11,9 @@ public class Challenge {
         if (number == 2) {
             return "2nd";
         }
-        return "3rd";
+        if (number == 3) {
+            return "3rd";
+        }
+        return "4th";
     }
 }

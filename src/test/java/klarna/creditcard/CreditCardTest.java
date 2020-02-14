@@ -7,10 +7,7 @@ public class CreditCardTest {
 
     @Test
     public void masksAllDigitsExceptForFirstAndLastFourCharacters() {
-        assertEquals("1#3456", CreditCard.maskify("123456"));
-        assertEquals("2#3456", CreditCard.maskify("223456"));
-        assertEquals("1#6789", CreditCard.maskify("126789"));
-        assertEquals("1##3456", CreditCard.maskify("1233456"));
+        assertEquals("1##4567", CreditCard.maskify("1234567"));
     }
 
     @Test

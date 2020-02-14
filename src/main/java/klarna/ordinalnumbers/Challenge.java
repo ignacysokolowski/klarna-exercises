@@ -7,27 +7,27 @@ public class Challenge {
         }
         if (number == 1) {
             String suffix = "st";
-            return "1" + suffix;
+            return number + suffix;
         }
         if (number == 2) {
             String suffix = "nd";
-            return "2" + suffix;
+            return number + suffix;
         }
         if (number == 3) {
             String suffix = "rd";
-            return "3" + suffix;
+            return number + suffix;
         }
         if (number == 21) {
             String suffix = "st";
-            return "21" + suffix;
+            return number + suffix;
         }
         if (number == 31) {
             String suffix = "st";
-            return "31" + suffix;
+            return number + suffix;
         }
         if (number == 22) {
             String suffix = "nd";
-            return "22" + suffix;
+            return number + suffix;
         }
         String suffix = "th";
         return number + suffix;

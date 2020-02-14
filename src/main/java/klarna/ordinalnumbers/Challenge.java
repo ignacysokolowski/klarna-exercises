@@ -12,8 +12,7 @@ public class Challenge {
         if (number == 11 || number == 12 || number == 13) {
             return "th";
         }
-        int onesPlaceValue = onesPlaceValueOf(number);
-        switch (onesPlaceValue) {
+        switch (onesPlaceValueOf(number)) {
             case 1:
                 return "st";
             case 2:

@@ -17,6 +17,11 @@ public class OrdinalNumbersTest {
     }
 
     @Test
+    public void convertsThree() {
+        assertEquals("3rd", Challenge.numberToOrdinal(3));
+    }
+
+    @Test
     public void doesNotConvertZero() {
         assertEquals("0", Challenge.numberToOrdinal(0));
     }

@@ -8,6 +8,9 @@ public class Challenge {
         if (number == 1) {
             return "1st";
         }
-        return "2nd";
+        if (number == 2) {
+            return "2nd";
+        }
+        return "3rd";
     }
 }

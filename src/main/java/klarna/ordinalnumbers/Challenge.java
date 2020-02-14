@@ -21,6 +21,10 @@ public class Challenge {
     }
 
     private static boolean endsWithOne(int number) {
-        return (String.valueOf(number).endsWith("1"));
+        return endsWith("1", number);
+    }
+
+    private static boolean endsWith(String suffix, int number) {
+        return (String.valueOf(number).endsWith(suffix));
     }
 }

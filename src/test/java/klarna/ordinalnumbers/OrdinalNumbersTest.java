@@ -25,6 +25,10 @@ public class OrdinalNumbersTest {
     public void appendsThToNumbersAboveThree() {
         assertEquals("4th", Challenge.numberToOrdinal(4));
         assertEquals("5th", Challenge.numberToOrdinal(5));
+        assertEquals("6th", Challenge.numberToOrdinal(6));
+        assertEquals("7th", Challenge.numberToOrdinal(7));
+        assertEquals("8th", Challenge.numberToOrdinal(8));
+        assertEquals("9th", Challenge.numberToOrdinal(9));
     }
 
     @Test

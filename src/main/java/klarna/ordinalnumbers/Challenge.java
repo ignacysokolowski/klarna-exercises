@@ -12,19 +12,15 @@ public class Challenge {
         if (number == 11 || number == 12 || number == 13) {
             return "th";
         }
-        if (hasOnesPlaceValue(1, number)) {
+        if (onesPlaceValueOf(number) == 1) {
             return "st";
-        } else if (hasOnesPlaceValue(2, number)) {
+        } else if (onesPlaceValueOf(number) == 2) {
             return "nd";
-        } else if (hasOnesPlaceValue(3, number)) {
+        } else if (onesPlaceValueOf(number) == 3) {
             return "rd";
         } else {
             return "th";
         }
-    }
-
-    private static boolean hasOnesPlaceValue(int value, int number) {
-        return onesPlaceValueOf(number) == value;
     }
 
     private static int onesPlaceValueOf(int number) {

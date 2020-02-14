@@ -51,6 +51,7 @@ public class OrdinalNumbersTest {
     @Test
     public void appendsNdToNumbersEndingWithTwo() {
         assertEquals("22nd", Challenge.numberToOrdinal(22));
+        assertEquals("32nd", Challenge.numberToOrdinal(32));
     }
 
     @Test

@@ -7,17 +7,17 @@ import static org.junit.Assert.assertEquals;
 public class OrdinalNumbersTest {
 
     @Test
-    public void convertsOne() {
+    public void appendsStToOne() {
         assertEquals("1st", Challenge.numberToOrdinal(1));
     }
 
     @Test
-    public void convertsTwo() {
+    public void appendsNdToTwo() {
         assertEquals("2nd", Challenge.numberToOrdinal(2));
     }
 
     @Test
-    public void convertsThree() {
+    public void appendsRdToThree() {
         assertEquals("3rd", Challenge.numberToOrdinal(3));
     }
 

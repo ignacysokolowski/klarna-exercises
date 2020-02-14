@@ -10,7 +10,8 @@ public class Challenge {
             return "1" + suffix;
         }
         if (number == 2) {
-            return "2nd";
+            String suffix = "nd";
+            return "2" + suffix;
         }
         if (number == 3) {
             return "3rd";

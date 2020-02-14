@@ -6,7 +6,7 @@ public class Challenge {
             return "0";
         }
         String suffix;
-        if (number == 11) {
+        if (number == 11 || number == 12) {
             suffix = "th";
         } else if (endsWith("1", number)) {
             suffix = "st";

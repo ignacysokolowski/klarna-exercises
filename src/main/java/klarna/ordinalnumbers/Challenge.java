@@ -14,17 +14,22 @@ public class Challenge {
             return "2" + suffix;
         }
         if (number == 3) {
-            return "3rd";
+            String suffix = "rd";
+            return "3" + suffix;
         }
         if (number == 21) {
-            return "21st";
+            String suffix = "st";
+            return "21" + suffix;
         }
         if (number == 31) {
-            return "31st";
+            String suffix = "st";
+            return "31" + suffix;
         }
         if (number == 22) {
-            return "22nd";
+            String suffix = "nd";
+            return "22" + suffix;
         }
-        return number + "th";
+        String suffix = "th";
+        return number + suffix;
     }
 }

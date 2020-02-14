@@ -9,19 +9,17 @@ public class Challenge {
     }
 
     private static String suffixFor(int number) {
-        String suffix;
         if (number == 11 || number == 12 || number == 13) {
-            suffix = "th";
+            return "th";
         } else if (endsWith("1", number)) {
-            suffix = "st";
+            return "st";
         } else if (endsWith("2", number)) {
-            suffix = "nd";
+            return "nd";
         } else if (endsWith("3", number)) {
-            suffix = "rd";
+            return "rd";
         } else {
-            suffix = "th";
+            return "th";
         }
-        return suffix;
     }
 
     private static boolean endsWith(String suffix, int number) {

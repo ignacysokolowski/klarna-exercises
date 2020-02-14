@@ -55,6 +55,11 @@ public class OrdinalNumbersTest {
     }
 
     @Test
+    public void appendsRdToNumbersEndingWithThree() {
+        assertEquals("23rd", Challenge.numberToOrdinal(23));
+    }
+
+    @Test
     public void doesNotConvertZero() {
         assertEquals("0", Challenge.numberToOrdinal(0));
     }

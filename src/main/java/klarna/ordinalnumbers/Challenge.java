@@ -8,7 +8,7 @@ public class Challenge {
         String suffix;
         if (number == 11) {
             suffix = "th";
-        } else if (number == 1 || number == 21 || number == 31) {
+        } else if (endsWithOne(number)) {
             suffix = "st";
         } else if (number == 2 || number == 22) {
             suffix = "nd";
@@ -18,5 +18,9 @@ public class Challenge {
             suffix = "th";
         }
         return number + suffix;
+    }
+
+    private static boolean endsWithOne(int number) {
+        return number == 1 || number == 21 || number == 31;
     }
 }

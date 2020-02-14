@@ -12,6 +12,11 @@ public class OrdinalNumbersTest {
     }
 
     @Test
+    public void convertsTwo() {
+        assertEquals("2nd", Challenge.numberToOrdinal(2));
+    }
+
+    @Test
     public void doesNotConvertZero() {
         assertEquals("0", Challenge.numberToOrdinal(0));
     }

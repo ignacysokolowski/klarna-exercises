@@ -5,6 +5,10 @@ public class Challenge {
         if (number == 0) {
             return "0";
         }
+        return number + suffixFor(number);
+    }
+
+    private static String suffixFor(int number) {
         String suffix;
         if (number == 11 || number == 12 || number == 13) {
             suffix = "th";
@@ -17,7 +21,7 @@ public class Challenge {
         } else {
             suffix = "th";
         }
-        return number + suffix;
+        return suffix;
     }
 
     private static boolean endsWith(String suffix, int number) {

@@ -22,8 +22,9 @@ public class OrdinalNumbersTest {
     }
 
     @Test
-    public void convertsFour() {
+    public void appendsThToNumbersAboveThree() {
         assertEquals("4th", Challenge.numberToOrdinal(4));
+        assertEquals("5th", Challenge.numberToOrdinal(5));
     }
 
     @Test

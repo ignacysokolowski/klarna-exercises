@@ -5,31 +5,32 @@ public class Challenge {
         if (number == 0) {
             return "0";
         }
+        String suffix;
         if (number == 1) {
-            String suffix = "st";
+            suffix = "st";
             return number + suffix;
         }
         if (number == 2) {
-            String suffix = "nd";
+            suffix = "nd";
             return number + suffix;
         }
         if (number == 3) {
-            String suffix = "rd";
+            suffix = "rd";
             return number + suffix;
         }
         if (number == 21) {
-            String suffix = "st";
+            suffix = "st";
             return number + suffix;
         }
         if (number == 31) {
-            String suffix = "st";
+            suffix = "st";
             return number + suffix;
         }
         if (number == 22) {
-            String suffix = "nd";
+            suffix = "nd";
             return number + suffix;
         } else {
-            String suffix = "th";
+            suffix = "th";
             return number + suffix;
         }
     }

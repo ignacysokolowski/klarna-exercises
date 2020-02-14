@@ -21,6 +21,6 @@ public class Challenge {
     }
 
     private static boolean endsWithOne(int number) {
-        return number == 1 || number == 21 || number == 31;
+        return (String.valueOf(number).endsWith("1"));
     }
 }

@@ -12,11 +12,12 @@ public class Challenge {
         if (number == 11 || number == 12 || number == 13) {
             return "th";
         }
-        if (onesPlaceValueOf(number) == 1) {
+        int onesPlaceValue = onesPlaceValueOf(number);
+        if (onesPlaceValue == 1) {
             return "st";
-        } else if (onesPlaceValueOf(number) == 2) {
+        } else if (onesPlaceValue == 2) {
             return "nd";
-        } else if (onesPlaceValueOf(number) == 3) {
+        } else if (onesPlaceValue == 3) {
             return "rd";
         } else {
             return "th";

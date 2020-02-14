@@ -6,7 +6,8 @@ public class Challenge {
             return "0";
         }
         if (number == 1) {
-            return "1st";
+            String suffix = "st";
+            return "1" + suffix;
         }
         if (number == 2) {
             return "2nd";

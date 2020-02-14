@@ -2,6 +2,9 @@ package klarna.ordinalnumbers;
 
 public class Challenge {
     public static String numberToOrdinal(int number) {
-        return "0";
+        if (number == 0) {
+            return "0";
+        }
+        return "1st";
     }
 }

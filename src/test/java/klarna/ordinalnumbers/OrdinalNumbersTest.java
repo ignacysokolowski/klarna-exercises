@@ -43,6 +43,11 @@ public class OrdinalNumbersTest {
     }
 
     @Test
+    public void appendsStToNumbersEndingWithOne() {
+        assertEquals("21st", Challenge.numberToOrdinal(21));
+    }
+
+    @Test
     public void doesNotConvertZero() {
         assertEquals("0", Challenge.numberToOrdinal(0));
     }

@@ -13,14 +13,15 @@ public class Challenge {
             return "th";
         }
         int onesPlaceValue = onesPlaceValueOf(number);
-        if (onesPlaceValue == 1) {
-            return "st";
-        } else if (onesPlaceValue == 2) {
-            return "nd";
-        } else if (onesPlaceValue == 3) {
-            return "rd";
-        } else {
-            return "th";
+        switch (onesPlaceValue) {
+            case 1:
+                return "st";
+            case 2:
+                return "nd";
+            case 3:
+                return "rd";
+            default:
+                return "th";
         }
     }
 

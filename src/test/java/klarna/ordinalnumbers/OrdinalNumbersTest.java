@@ -45,6 +45,7 @@ public class OrdinalNumbersTest {
     @Test
     public void appendsStToNumbersEndingWithOne() {
         assertEquals("21st", Challenge.numberToOrdinal(21));
+        assertEquals("31st", Challenge.numberToOrdinal(31));
     }
 
     @Test

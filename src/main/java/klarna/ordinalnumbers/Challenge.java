@@ -6,16 +6,12 @@ public class Challenge {
             return "0";
         }
         String suffix;
-        if (number == 1) {
+        if (number == 1 || number == 21 || number == 31) {
             suffix = "st";
         } else if (number == 2) {
             suffix = "nd";
         } else if (number == 3) {
             suffix = "rd";
-        } else if (number == 21) {
-            suffix = "st";
-        } else if (number == 31) {
-            suffix = "st";
         } else if (number == 22) {
             suffix = "nd";
         } else {

@@ -24,6 +24,10 @@ public class Challenge {
     }
 
     private static boolean hasOnesPlaceValue(int value, int number) {
-        return number % 10 == value;
+        return onesPlaceValueOf(number) == value;
+    }
+
+    private static int onesPlaceValueOf(int number) {
+        return number % 10;
     }
 }

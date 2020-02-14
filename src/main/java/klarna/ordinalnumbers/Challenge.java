@@ -12,6 +12,10 @@ public class Challenge {
         if (number == 11 || number == 12 || number == 13) {
             return "th";
         }
+        return onesPlaceValueBasedSuffixFor(number);
+    }
+
+    private static String onesPlaceValueBasedSuffixFor(int number) {
         switch (onesPlaceValueOf(number)) {
             case 1:
                 return "st";

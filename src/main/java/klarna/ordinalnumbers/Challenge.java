@@ -28,8 +28,9 @@ public class Challenge {
         if (number == 22) {
             String suffix = "nd";
             return number + suffix;
+        } else {
+            String suffix = "th";
+            return number + suffix;
         }
-        String suffix = "th";
-        return number + suffix;
     }
 }

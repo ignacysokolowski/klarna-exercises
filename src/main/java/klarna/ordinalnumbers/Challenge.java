@@ -10,7 +10,7 @@ public class Challenge {
             suffix = "th";
         } else if (endsWith("1", number)) {
             suffix = "st";
-        } else if (number == 2 || number == 22 || number == 32) {
+        } else if (endsWith("2", number)) {
             suffix = "nd";
         } else if (number == 3) {
             suffix = "rd";

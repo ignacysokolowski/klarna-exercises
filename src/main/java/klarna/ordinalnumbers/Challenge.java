@@ -6,31 +6,43 @@ import java.util.Optional;
 
 public class Challenge {
 
-    private static Map<Integer, String> suffixes = new HashMap<Integer, String>() {{
-        put(1, "st");
-        put(2, "nd");
-        put(3, "rd");
-    }};
-
     public static String numberToOrdinal(int number) {
-        if (number == 0) {
-            return "0";
+        return new OrdinalNumeral(number).toString();
+    }
+
+    private static class OrdinalNumeral {
+        private static Map<Integer, String> suffixes = new HashMap<Integer, String>() {{
+            put(1, "st");
+            put(2, "nd");
+            put(3, "rd");
+        }};
+
+        private final int number;
+
+        OrdinalNumeral(int number) {
+            this.number = number;
         }
-        return number + suffixFor(number);
-    }
 
-    private static String suffixFor(int number) {
-        return Optional.ofNullable(onesBasedSuffixFor(number)).orElse("th");
-    }
-
-    private static String onesBasedSuffixFor(int number) {
-        if (number == 11 || number == 12 || number == 13) {
-            return null;
+        public String toString() {
+            if (number == 0) {
+                return "0";
+            }
+            return number + suffix();
         }
-        return suffixes.get(onesDigitFrom(number));
-    }
 
-    private static int onesDigitFrom(int number) {
-        return number % 10;
+        private String suffix() {
+            return Optional.ofNullable(onesBasedSuffix()).orElse("th");
+        }
+
+        private String onesBasedSuffix() {
+            if (number == 11 || number == 12 || number == 13) {
+                return null;
+            }
+            return suffixes.get(onesDigit());
+        }
+
+        private int onesDigit() {
+            return number % 10;
+        }
     }
 }

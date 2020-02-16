@@ -35,13 +35,13 @@ public class Challenge {
         }
 
         private String onesBasedSuffix() {
-            if (isExceptionTo123Rule(tensDigit())) {
+            if (isExceptionToOnesRule(tensDigit())) {
                 return null;
             }
             return suffixes.get(onesDigit());
         }
 
-        private boolean isExceptionTo123Rule(int tensDigit) {
+        private boolean isExceptionToOnesRule(int tensDigit) {
             return tensDigit == 11 || tensDigit == 12 || tensDigit == 13;
         }
 

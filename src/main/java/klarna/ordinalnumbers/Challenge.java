@@ -45,8 +45,8 @@ public class Challenge {
             return number % 100;
         }
 
-        private boolean isExceptionTo123Rule(int number) {
-            return number == 11 || number == 12 || number == 13;
+        private boolean isExceptionTo123Rule(int tensDigit) {
+            return tensDigit == 11 || tensDigit == 12 || tensDigit == 13;
         }
 
         private int onesDigit() {

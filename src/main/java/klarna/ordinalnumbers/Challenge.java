@@ -13,12 +13,12 @@ public class Challenge {
     }
 
     private static class OrdinalNumeral {
-        private static Map<Integer, String> suffixes = new HashMap<Integer, String>() {{
+        private static Map<Integer, String> onesIndicators = new HashMap<Integer, String>() {{
             put(1, "st");
             put(2, "nd");
             put(3, "rd");
         }};
-        private List<Integer> tensWithDefaultSuffix = Arrays.asList(11, 12, 13);
+        private List<Integer> tensWithDefaultIndicator = Arrays.asList(11, 12, 13);
 
         private final int number;
 
@@ -30,22 +30,22 @@ public class Challenge {
             if (number == 0) {
                 return "0";
             }
-            return number + suffix();
+            return number + indicator();
         }
 
-        private String suffix() {
-            return Optional.ofNullable(onesBasedSuffix()).orElse("th");
+        private String indicator() {
+            return Optional.ofNullable(onesBasedIndicator()).orElse("th");
         }
 
-        private String onesBasedSuffix() {
+        private String onesBasedIndicator() {
             if (isExceptionToOnesRule(tensDigit())) {
                 return null;
             }
-            return suffixes.get(onesDigit());
+            return onesIndicators.get(onesDigit());
         }
 
         private boolean isExceptionToOnesRule(int tensDigit) {
-            return tensWithDefaultSuffix.contains(tensDigit);
+            return tensWithDefaultIndicator.contains(tensDigit);
         }
 
         private int onesDigit() {

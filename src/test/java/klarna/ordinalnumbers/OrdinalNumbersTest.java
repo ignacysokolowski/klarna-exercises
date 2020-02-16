@@ -11,6 +11,8 @@ public class OrdinalNumbersTest {
         assertEquals("1st", Challenge.numberToOrdinal(1));
         assertEquals("21st", Challenge.numberToOrdinal(21));
         assertEquals("31st", Challenge.numberToOrdinal(31));
+        assertEquals("101st", Challenge.numberToOrdinal(101));
+        assertEquals("221st", Challenge.numberToOrdinal(221));
     }
 
     @Test
@@ -32,6 +34,7 @@ public class OrdinalNumbersTest {
         assertEquals("11th", Challenge.numberToOrdinal(11));
         assertEquals("111th", Challenge.numberToOrdinal(111));
         assertEquals("211th", Challenge.numberToOrdinal(211));
+        assertEquals("1211th", Challenge.numberToOrdinal(1211));
     }
 
     @Test
@@ -57,6 +60,7 @@ public class OrdinalNumbersTest {
         assertEquals("8th", Challenge.numberToOrdinal(8));
         assertEquals("9th", Challenge.numberToOrdinal(9));
         assertEquals("10th", Challenge.numberToOrdinal(10));
+
         assertEquals("14th", Challenge.numberToOrdinal(14));
         assertEquals("15th", Challenge.numberToOrdinal(15));
         assertEquals("16th", Challenge.numberToOrdinal(16));
@@ -64,6 +68,9 @@ public class OrdinalNumbersTest {
         assertEquals("18th", Challenge.numberToOrdinal(18));
         assertEquals("19th", Challenge.numberToOrdinal(19));
         assertEquals("20th", Challenge.numberToOrdinal(20));
+        assertEquals("24th", Challenge.numberToOrdinal(24));
+        assertEquals("100th", Challenge.numberToOrdinal(100));
+        assertEquals("114th", Challenge.numberToOrdinal(114));
     }
 
     @Test

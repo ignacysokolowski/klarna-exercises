@@ -41,16 +41,16 @@ public class Challenge {
             return suffixes.get(onesDigit());
         }
 
-        private int tensDigit() {
-            return number % 100;
-        }
-
         private boolean isExceptionTo123Rule(int tensDigit) {
             return tensDigit == 11 || tensDigit == 12 || tensDigit == 13;
         }
 
         private int onesDigit() {
             return number % 10;
+        }
+
+        private int tensDigit() {
+            return number % 100;
         }
     }
 }

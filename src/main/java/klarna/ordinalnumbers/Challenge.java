@@ -35,7 +35,7 @@ public class Challenge {
         }
 
         private String onesBasedSuffix() {
-            if (number == 11 || number == 12 || number == 13) {
+            if (number == 111 || number == 11 || number == 12 || number == 13) {
                 return null;
             }
             return suffixes.get(onesDigit());

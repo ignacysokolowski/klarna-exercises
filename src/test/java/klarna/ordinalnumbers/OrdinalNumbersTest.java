@@ -37,11 +37,15 @@ public class OrdinalNumbersTest {
     @Test
     public void appendsThToNumbersEndingWithTwelve() {
         assertEquals("12th", Challenge.numberToOrdinal(12));
+        assertEquals("112th", Challenge.numberToOrdinal(112));
+        assertEquals("212th", Challenge.numberToOrdinal(212));
     }
 
     @Test
     public void appendsThToNumbersEndingWithThirteen() {
         assertEquals("13th", Challenge.numberToOrdinal(13));
+        assertEquals("113th", Challenge.numberToOrdinal(113));
+        assertEquals("213th", Challenge.numberToOrdinal(213));
     }
 
     @Test

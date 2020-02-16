@@ -28,7 +28,22 @@ public class OrdinalNumbersTest {
     }
 
     @Test
-    public void appendsThToNumbersAboveThree() {
+    public void appendsThToNumbersEndingWithEleven() {
+        assertEquals("11th", Challenge.numberToOrdinal(11));
+    }
+
+    @Test
+    public void appendsThToNumbersEndingWithTwelve() {
+        assertEquals("12th", Challenge.numberToOrdinal(12));
+    }
+
+    @Test
+    public void appendsThToNumbersEndingWithThirteen() {
+        assertEquals("13th", Challenge.numberToOrdinal(13));
+    }
+
+    @Test
+    public void appendsThToAllOtherNumbers() {
         assertEquals("4th", Challenge.numberToOrdinal(4));
         assertEquals("5th", Challenge.numberToOrdinal(5));
         assertEquals("6th", Challenge.numberToOrdinal(6));
@@ -36,9 +51,6 @@ public class OrdinalNumbersTest {
         assertEquals("8th", Challenge.numberToOrdinal(8));
         assertEquals("9th", Challenge.numberToOrdinal(9));
         assertEquals("10th", Challenge.numberToOrdinal(10));
-        assertEquals("11th", Challenge.numberToOrdinal(11));
-        assertEquals("12th", Challenge.numberToOrdinal(12));
-        assertEquals("13th", Challenge.numberToOrdinal(13));
         assertEquals("14th", Challenge.numberToOrdinal(14));
         assertEquals("15th", Challenge.numberToOrdinal(15));
         assertEquals("16th", Challenge.numberToOrdinal(16));

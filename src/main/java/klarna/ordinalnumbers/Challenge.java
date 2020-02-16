@@ -2,6 +2,7 @@ package klarna.ordinalnumbers;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class Challenge {
 
@@ -19,11 +20,7 @@ public class Challenge {
     }
 
     private static String suffixFor(int number) {
-        String suffix = onesPlaceValueBasedSuffixFor(number);
-        if (suffix == null) {
-            return "th";
-        }
-        return suffix;
+        return Optional.ofNullable(onesPlaceValueBasedSuffixFor(number)).orElse("th");
     }
 
     private static String onesPlaceValueBasedSuffixFor(int number) {

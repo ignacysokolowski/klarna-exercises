@@ -1,6 +1,16 @@
 package klarna.ordinalnumbers;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Challenge {
+
+    private static Map<Integer, String> suffixes = new HashMap<Integer, String>() {{
+        put(1, "st");
+        put(2, "nd");
+        put(3, "rd");
+    }};
+
     public static String numberToOrdinal(int number) {
         if (number == 0) {
             return "0";
@@ -20,16 +30,7 @@ public class Challenge {
         if (number == 11 || number == 12 || number == 13) {
             return null;
         }
-        switch (onesPlaceValueOf(number)) {
-            case 1:
-                return "st";
-            case 2:
-                return "nd";
-            case 3:
-                return "rd";
-            default:
-                return null;
-        }
+        return suffixes.get(onesPlaceValueOf(number));
     }
 
     private static int onesPlaceValueOf(int number) {

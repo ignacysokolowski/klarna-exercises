@@ -2,7 +2,6 @@ package klarna.ordinalnumbers;
 
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -18,7 +17,6 @@ public class Challenge {
             put(2, "nd");
             put(3, "rd");
         }};
-        private List<Integer> tensWithDefaultIndicator = Arrays.asList(11, 12, 13);
 
         private final int number;
 
@@ -45,15 +43,12 @@ public class Challenge {
         }
 
         private boolean isExceptionToOnesRule() {
-            return tensWithDefaultIndicator.contains(tensDigit());
+            return Arrays.asList(11, 12, 13).contains(number % 100);
         }
 
         private int onesDigit() {
             return number % 10;
         }
 
-        private int tensDigit() {
-            return number % 100;
-        }
     }
 }

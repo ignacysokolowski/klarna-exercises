@@ -20,17 +20,17 @@ public class Challenge {
     }
 
     private static String suffixFor(int number) {
-        return Optional.ofNullable(onesPlaceValueBasedSuffixFor(number)).orElse("th");
+        return Optional.ofNullable(onesBasedSuffixFor(number)).orElse("th");
     }
 
-    private static String onesPlaceValueBasedSuffixFor(int number) {
+    private static String onesBasedSuffixFor(int number) {
         if (number == 11 || number == 12 || number == 13) {
             return null;
         }
-        return suffixes.get(onesPlaceValueOf(number));
+        return suffixes.get(onesDigitFrom(number));
     }
 
-    private static int onesPlaceValueOf(int number) {
+    private static int onesDigitFrom(int number) {
         return number % 10;
     }
 }

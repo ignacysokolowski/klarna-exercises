@@ -9,10 +9,10 @@ import java.util.Optional;
 public class Challenge {
 
     public static String numberToOrdinal(int number) {
-        return new Ordinal(number).toString();
+        return new OrdinalNumber(number).toString();
     }
 
-    private static class Ordinal {
+    private static class OrdinalNumber {
         private static Map<Integer, String> onesIndicators = new HashMap<Integer, String>() {{
             put(1, "st");
             put(2, "nd");
@@ -22,7 +22,7 @@ public class Challenge {
 
         private final int number;
 
-        Ordinal(int number) {
+        OrdinalNumber(int number) {
             this.number = number;
         }
 

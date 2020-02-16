@@ -38,14 +38,14 @@ public class Challenge {
         }
 
         private String onesBasedIndicator() {
-            if (isExceptionToOnesRule(tensDigit())) {
+            if (isExceptionToOnesRule()) {
                 return null;
             }
             return onesIndicators.get(onesDigit());
         }
 
-        private boolean isExceptionToOnesRule(int tensDigit) {
-            return tensWithDefaultIndicator.contains(tensDigit);
+        private boolean isExceptionToOnesRule() {
+            return tensWithDefaultIndicator.contains(tensDigit());
         }
 
         private int onesDigit() {

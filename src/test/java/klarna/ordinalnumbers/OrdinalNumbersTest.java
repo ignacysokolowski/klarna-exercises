@@ -7,18 +7,24 @@ import static org.junit.Assert.assertEquals;
 public class OrdinalNumbersTest {
 
     @Test
-    public void appendsStToOne() {
+    public void appendsStToNumbersEndingWithOne() {
         assertEquals("1st", Challenge.numberToOrdinal(1));
+        assertEquals("21st", Challenge.numberToOrdinal(21));
+        assertEquals("31st", Challenge.numberToOrdinal(31));
     }
 
     @Test
-    public void appendsNdToTwo() {
+    public void appendsNdToNumbersEndingWithTwo() {
         assertEquals("2nd", Challenge.numberToOrdinal(2));
+        assertEquals("22nd", Challenge.numberToOrdinal(22));
+        assertEquals("32nd", Challenge.numberToOrdinal(32));
     }
 
     @Test
-    public void appendsRdToThree() {
+    public void appendsRdToNumbersEndingWithThree() {
         assertEquals("3rd", Challenge.numberToOrdinal(3));
+        assertEquals("23rd", Challenge.numberToOrdinal(23));
+        assertEquals("33rd", Challenge.numberToOrdinal(33));
     }
 
     @Test
@@ -40,24 +46,6 @@ public class OrdinalNumbersTest {
         assertEquals("18th", Challenge.numberToOrdinal(18));
         assertEquals("19th", Challenge.numberToOrdinal(19));
         assertEquals("20th", Challenge.numberToOrdinal(20));
-    }
-
-    @Test
-    public void appendsStToNumbersEndingWithOne() {
-        assertEquals("21st", Challenge.numberToOrdinal(21));
-        assertEquals("31st", Challenge.numberToOrdinal(31));
-    }
-
-    @Test
-    public void appendsNdToNumbersEndingWithTwo() {
-        assertEquals("22nd", Challenge.numberToOrdinal(22));
-        assertEquals("32nd", Challenge.numberToOrdinal(32));
-    }
-
-    @Test
-    public void appendsRdToNumbersEndingWithThree() {
-        assertEquals("23rd", Challenge.numberToOrdinal(23));
-        assertEquals("33rd", Challenge.numberToOrdinal(33));
     }
 
     @Test

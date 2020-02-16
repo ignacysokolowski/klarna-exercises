@@ -36,13 +36,13 @@ public class Challenge {
         }
 
         private String onesBasedIndicator() {
-            if (isExceptionToOnesRule()) {
+            if (isExceptionToTheOnesRule()) {
                 return null;
             }
             return onesIndicators.get(onesDigit());
         }
 
-        private boolean isExceptionToOnesRule() {
+        private boolean isExceptionToTheOnesRule() {
             return Arrays.asList(11, 12, 13).contains(number % 100);
         }
 

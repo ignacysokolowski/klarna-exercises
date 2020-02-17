@@ -20,16 +20,20 @@ public class Calc {
         }
         Stack<Double> numbers = new Stack<>();
         for (String token : expression.split(" ")) {
-            DoubleBinaryOperator operator = operators.get(token);
-            double nextNumber;
-            if (operator == null) {
-                nextNumber = Double.parseDouble(token);
-            } else {
-                nextNumber = resultOf(operator, numbers);
-            }
-            numbers.push(nextNumber);
+            numbers.push(nextNumber(numbers, token));
         }
         return numbers.pop();
+    }
+
+    public double nextNumber(Stack<Double> numbers, String token) {
+        DoubleBinaryOperator operator = operators.get(token);
+        double nextNumber;
+        if (operator == null) {
+            nextNumber = Double.parseDouble(token);
+        } else {
+            nextNumber = resultOf(operator, numbers);
+        }
+        return nextNumber;
     }
 
     private double resultOf(DoubleBinaryOperator operator, Stack<Double> numbers) {

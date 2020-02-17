@@ -7,7 +7,7 @@ import java.util.function.DoubleBinaryOperator;
 
 public class Calc {
 
-    private Map<String, DoubleBinaryOperator> operators = new HashMap<String, DoubleBinaryOperator>() {{
+    private static Map<String, DoubleBinaryOperator> operators = new HashMap<String, DoubleBinaryOperator>() {{
         put("+", (a, b) -> a + b);
         put("-", (a, b) -> a - b);
         put("*", (a, b) -> a * b);

@@ -1,14 +1,16 @@
 package klarna.calculator;
 
+import java.util.Stack;
+
 public class Calc {
     public double evaluate(String expression) {
         if (expression.isEmpty()) {
             return 0;
         }
-        double result = 0.0;
+        Stack<Double> numbers = new Stack<>();
         for (String token : expression.split(" ")) {
-            result = Double.parseDouble(token);
+            numbers.push(Double.parseDouble(token));
         }
-        return result;
+        return numbers.pop();
     }
 }

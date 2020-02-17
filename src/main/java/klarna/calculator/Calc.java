@@ -25,7 +25,8 @@ public class Calc {
                 case "-":
                 case "*":
                 case "/":
-                    numbers.push(resultOf(operators.get(token), numbers));
+                    DoubleBinaryOperator operator = operators.get(token);
+                    numbers.push(resultOf(operator, numbers));
                     break;
                 default:
                     numbers.push(Double.parseDouble(token));

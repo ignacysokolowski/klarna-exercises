@@ -11,7 +11,12 @@ public class CalculateTests {
         assertEquals(0, calculator.evaluate(""), 0);
     }
 
-// Acceptance tests
+    @Test
+    public void expressionsWithoutOperatorsEvaluateToTheLastNumber() {
+        assertEquals(3, calculator.evaluate("3"), 0);
+    }
+
+    // Acceptance tests
 //    @Test
 //    public void shouldParseNumbers() {
 //        assertEquals(3, calculator.evaluate("1 2 3"), 0);

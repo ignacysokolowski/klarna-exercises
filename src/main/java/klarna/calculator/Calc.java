@@ -1,6 +1,7 @@
 package klarna.calculator;
 
 import java.util.Stack;
+import java.util.function.DoubleBinaryOperator;
 
 public class Calc {
     public double evaluate(String expression) {
@@ -10,9 +11,7 @@ public class Calc {
         Stack<Double> numbers = new Stack<>();
         for (String token : expression.split(" ")) {
             if (token.equals("+")) {
-                double operand2 = numbers.pop();
-                double operand1 = numbers.pop();
-                numbers.push(operand1 + operand2);
+                pushOperation(numbers, (operand1, operand2) -> operand1 + operand2);
             } else if (token.equals("-")) {
                 double operand2 = numbers.pop();
                 double operand1 = numbers.pop();
@@ -22,5 +21,11 @@ public class Calc {
             }
         }
         return numbers.pop();
+    }
+
+    public void pushOperation(Stack<Double> numbers, DoubleBinaryOperator operator) {
+        double operand2 = numbers.pop();
+        double operand1 = numbers.pop();
+        numbers.push(operator.applyAsDouble(operand1, operand2));
     }
 }

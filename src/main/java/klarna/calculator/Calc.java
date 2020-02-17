@@ -11,7 +11,7 @@ public class Calc {
         Stack<Double> numbers = new Stack<>();
         for (String token : expression.split(" ")) {
             if (token.equals("+")) {
-                numbers.push(operation(numbers, (operand1, operand2) -> operand1 + operand2));
+                numbers.push(operation(numbers, (a, b) -> a + b));
             } else if (token.equals("-")) {
                 double operand2 = numbers.pop();
                 double operand1 = numbers.pop();

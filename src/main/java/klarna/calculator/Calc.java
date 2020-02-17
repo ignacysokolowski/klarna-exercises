@@ -16,6 +16,7 @@ public class Calc {
         DoubleBinaryOperator division = (a, b) -> a / b;
         Map<String, DoubleBinaryOperator> operators = new HashMap<String, DoubleBinaryOperator>() {{
             put("+", (a, b) -> a + b);
+            put("-", subtraction);
         }};
         for (String token : expression.split(" ")) {
             switch (token) {
@@ -23,7 +24,7 @@ public class Calc {
                     numbers.push(resultOf(operators.get(token), numbers));
                     break;
                 case "-":
-                    numbers.push(resultOf(subtraction, numbers));
+                    numbers.push(resultOf(operators.get(token), numbers));
                     break;
                 case "*":
                     numbers.push(resultOf(multiplication, numbers));

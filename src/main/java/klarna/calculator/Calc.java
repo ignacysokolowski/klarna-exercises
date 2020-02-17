@@ -25,7 +25,7 @@ public class Calc {
         return numbers.pop();
     }
 
-    public double nextNumber(Stack<Double> numbers, String token) {
+    private double nextNumber(Stack<Double> numbers, String token) {
         DoubleBinaryOperator operator = operators.get(token);
         return operator != null ? resultOf(operator, numbers) : Double.parseDouble(token);
     }

@@ -22,11 +22,11 @@ public class CalculateTests {
     public void shouldParseNumbers() {
         assertEquals(3, calculator.evaluate("1 2 3"), 0);
     }
-//
-//    @Test
-//    public void shouldParseFloats() {
-//        assertEquals(3.5, calculator.evaluate("1 2 3.5"), 0);
-//    }
+
+    @Test
+    public void shouldParseFloats() {
+        assertEquals(3.5, calculator.evaluate("1 2 3.5"), 0);
+    }
 //
 //    @Test
 //    public void shouldSupportAddition() {

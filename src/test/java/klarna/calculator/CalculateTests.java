@@ -50,4 +50,9 @@ public class CalculateTests {
         assertEquals(2, calculator.evaluate("6 3 /"), 0);
         assertEquals(3, calculator.evaluate("6 2 /"), 0);
     }
+
+    @Test
+    public void combinesOperations() {
+        assertEquals(14, calculator.evaluate("5 1 2 + 4 * + 3 -"), 0);
+    }
 }

@@ -27,11 +27,7 @@ public class Calc {
 
     public double nextNumber(Stack<Double> numbers, String token) {
         DoubleBinaryOperator operator = operators.get(token);
-        if (operator == null) {
-            return Double.parseDouble(token);
-        } else {
-            return resultOf(operator, numbers);
-        }
+        return operator != null ? resultOf(operator, numbers) : Double.parseDouble(token);
     }
 
     private double resultOf(DoubleBinaryOperator operator, Stack<Double> numbers) {

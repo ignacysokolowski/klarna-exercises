@@ -14,6 +14,7 @@ public class CalculateTests {
     @Test
     public void expressionsWithoutOperatorsEvaluateToTheLastNumber() {
         assertEquals(3, calculator.evaluate("3"), 0);
+        assertEquals(2, calculator.evaluate("3 2"), 0);
     }
 
     // Acceptance tests

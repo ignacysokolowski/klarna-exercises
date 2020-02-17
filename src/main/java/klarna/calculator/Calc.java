@@ -5,6 +5,10 @@ public class Calc {
         if (expression.isEmpty()) {
             return 0;
         }
-        return Double.valueOf(expression);
+        double result = 0.0;
+        for (String token : expression.split(" ")) {
+            result = Double.parseDouble(token);
+        }
+        return result;
     }
 }

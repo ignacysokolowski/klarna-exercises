@@ -13,9 +13,7 @@ public class Calc {
             if (token.equals("+")) {
                 numbers.push(resultOf((a, b) -> a + b, numbers));
             } else if (token.equals("-")) {
-                double operand2 = numbers.pop();
-                double operand1 = numbers.pop();
-                numbers.push(operand1 - operand2);
+                numbers.push(resultOf((a, b) -> a - b, numbers));
             } else {
                 numbers.push(Double.parseDouble(token));
             }

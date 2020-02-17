@@ -11,7 +11,7 @@ public class Calc {
         Stack<Double> numbers = new Stack<>();
         for (String token : expression.split(" ")) {
             if (token.equals("+")) {
-                pushOperation(numbers, (operand1, operand2) -> operand1 + operand2);
+                numbers.push(operation(numbers, (operand1, operand2) -> operand1 + operand2));
             } else if (token.equals("-")) {
                 double operand2 = numbers.pop();
                 double operand1 = numbers.pop();
@@ -21,10 +21,6 @@ public class Calc {
             }
         }
         return numbers.pop();
-    }
-
-    private void pushOperation(Stack<Double> numbers, DoubleBinaryOperator operator) {
-        numbers.push(operation(numbers, operator));
     }
 
     private double operation(Stack<Double> numbers, DoubleBinaryOperator operator) {

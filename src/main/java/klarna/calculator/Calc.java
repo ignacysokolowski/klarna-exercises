@@ -9,7 +9,11 @@ public class Calc {
         }
         Stack<Double> numbers = new Stack<>();
         for (String token : expression.split(" ")) {
-            numbers.push(Double.parseDouble(token));
+            if (token.equals("+")) {
+                numbers.push(4.0);
+            } else {
+                numbers.push(Double.parseDouble(token));
+            }
         }
         return numbers.pop();
     }

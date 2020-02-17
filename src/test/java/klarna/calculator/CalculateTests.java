@@ -23,12 +23,12 @@ public class CalculateTests {
         assertEquals(3.5, calculator.evaluate("1 2 3.5"), 0);
     }
 
+    @Test
+    public void supportsAddition() {
+        assertEquals(4, calculator.evaluate("1 3 +"), 0);
+    }
+
     // Acceptance tests
-//
-//    @Test
-//    public void shouldSupportAddition() {
-//        assertEquals(4, calculator.evaluate("1 3 +"), 0);
-//    }
 //
 //    @Test
 //    public void shouldSupportMultiplication() {

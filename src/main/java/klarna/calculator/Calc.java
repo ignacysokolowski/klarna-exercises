@@ -13,6 +13,10 @@ public class Calc {
                 double operand2 = numbers.pop();
                 double operand1 = numbers.pop();
                 numbers.push(operand1 + operand2);
+            } else if (token.equals("-")) {
+                double operand2 = numbers.pop();
+                double operand1 = numbers.pop();
+                numbers.push(operand1 - operand2);
             } else {
                 numbers.push(Double.parseDouble(token));
             }

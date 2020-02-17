@@ -30,16 +30,18 @@ public class CalculateTests {
         assertEquals(5, calculator.evaluate("2 3 +"), 0);
     }
 
+    @Test
+    public void supportsSubtraction() {
+        assertEquals(-2, calculator.evaluate("1 3 -"), 0);
+        assertEquals(-1, calculator.evaluate("1 2 -"), 0);
+        assertEquals(1, calculator.evaluate("3 2 -"), 0);
+    }
+
     // Acceptance tests
 //
 //    @Test
 //    public void shouldSupportMultiplication() {
 //        assertEquals(3, calculator.evaluate("1 3 *"), 0);
-//    }
-//
-//    @Test
-//    public void shouldSupportSubtraction() {
-//        assertEquals(-2, calculator.evaluate("1 3 -"), 0);
 //    }
 //
 //    @Test

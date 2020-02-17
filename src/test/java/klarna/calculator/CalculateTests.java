@@ -44,10 +44,10 @@ public class CalculateTests {
         assertEquals(8, calculator.evaluate("2 4 *"), 0);
     }
 
-    // Acceptance tests
-//
-//    @Test
-//    public void shouldSupportDivision() {
-//        assertEquals(2, calculator.evaluate("4 2 /"), 0);
-//    }
+    @Test
+    public void supportsDivision() {
+        assertEquals(2, calculator.evaluate("4 2 /"), 0);
+        assertEquals(2, calculator.evaluate("6 3 /"), 0);
+        assertEquals(3, calculator.evaluate("6 2 /"), 0);
+    }
 }

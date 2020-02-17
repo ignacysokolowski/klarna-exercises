@@ -19,10 +19,14 @@ public class Calc {
             return 0;
         }
         Stack<Double> numbers = new Stack<>();
-        for (String token : expression.split(" ")) {
+        for (String token : tokenize(expression)) {
             numbers.push(nextNumberFor(token, numbers));
         }
         return numbers.pop();
+    }
+
+    private String[] tokenize(String expression) {
+        return expression.split(" ");
     }
 
     private double nextNumberFor(String token, Stack<Double> numbers) {

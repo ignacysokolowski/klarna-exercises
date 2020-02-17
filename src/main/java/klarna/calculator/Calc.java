@@ -21,8 +21,6 @@ public class Calc {
         for (String token : expression.split(" ")) {
             switch (token) {
                 case "+":
-                    numbers.push(resultOf(operators.get(token), numbers));
-                    break;
                 case "-":
                     numbers.push(resultOf(operators.get(token), numbers));
                     break;

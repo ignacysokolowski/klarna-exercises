@@ -20,17 +20,11 @@ public class Calc {
         }
         Stack<Double> numbers = new Stack<>();
         for (String token : expression.split(" ")) {
-            switch (token) {
-                case "+":
-                case "-":
-                case "*":
-                case "/":
-                    DoubleBinaryOperator operator = operators.get(token);
-                    numbers.push(resultOf(operator, numbers));
-                    break;
-                default:
-                    numbers.push(Double.parseDouble(token));
-                    break;
+            DoubleBinaryOperator operator = operators.get(token);
+            if (operator == null) {
+                numbers.push(Double.parseDouble(token));
+            } else {
+                numbers.push(resultOf(operator, numbers));
             }
         }
         return numbers.pop();

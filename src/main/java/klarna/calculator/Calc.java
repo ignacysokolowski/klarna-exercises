@@ -14,6 +14,8 @@ public class Calc {
                 numbers.push(resultOf((a, b) -> a + b, numbers));
             } else if (token.equals("-")) {
                 numbers.push(resultOf((a, b) -> a - b, numbers));
+            } else if (token.equals("*")) {
+                numbers.push(resultOf((a, b) -> a * b, numbers));
             } else {
                 numbers.push(Double.parseDouble(token));
             }

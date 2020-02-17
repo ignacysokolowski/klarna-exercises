@@ -37,12 +37,14 @@ public class CalculateTests {
         assertEquals(1, calculator.evaluate("3 2 -"), 0);
     }
 
+    @Test
+    public void supportsMultiplication() {
+        assertEquals(3, calculator.evaluate("1 3 *"), 0);
+        assertEquals(4, calculator.evaluate("2 2 *"), 0);
+        assertEquals(8, calculator.evaluate("2 4 *"), 0);
+    }
+
     // Acceptance tests
-//
-//    @Test
-//    public void shouldSupportMultiplication() {
-//        assertEquals(3, calculator.evaluate("1 3 *"), 0);
-//    }
 //
 //    @Test
 //    public void shouldSupportDivision() {

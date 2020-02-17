@@ -6,17 +6,19 @@ import java.util.Stack;
 import java.util.function.DoubleBinaryOperator;
 
 public class Calc {
+
+    private Map<String, DoubleBinaryOperator> operators = new HashMap<String, DoubleBinaryOperator>() {{
+        put("+", (a, b) -> a + b);
+        put("-", (a, b) -> a - b);
+        put("*", (a, b) -> a * b);
+        put("/", (a, b) -> a / b);
+    }};
+
     public double evaluate(String expression) {
         if (expression.isEmpty()) {
             return 0;
         }
         Stack<Double> numbers = new Stack<>();
-        Map<String, DoubleBinaryOperator> operators = new HashMap<String, DoubleBinaryOperator>() {{
-            put("+", (a, b) -> a + b);
-            put("-", (a, b) -> a - b);
-            put("*", (a, b) -> a * b);
-            put("/", (a, b) -> a / b);
-        }};
         for (String token : expression.split(" ")) {
             switch (token) {
                 case "+":

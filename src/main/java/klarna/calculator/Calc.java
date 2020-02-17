@@ -5,6 +5,6 @@ public class Calc {
         if (expression.isEmpty()) {
             return 0;
         }
-        return 3;
+        return Double.valueOf(expression);
     }
 }

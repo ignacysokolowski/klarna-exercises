@@ -11,6 +11,9 @@ public class Calc {
             return 0;
         }
         Stack<Double> numbers = new Stack<>();
+        DoubleBinaryOperator subtraction = (a, b) -> a - b;
+        DoubleBinaryOperator multiplication = (a, b) -> a * b;
+        DoubleBinaryOperator division = (a, b) -> a / b;
         Map<String, DoubleBinaryOperator> operators = new HashMap<String, DoubleBinaryOperator>() {{
             put("+", (a, b) -> a + b);
         }};
@@ -20,13 +23,13 @@ public class Calc {
                     numbers.push(resultOf(operators.get("+"), numbers));
                     break;
                 case "-":
-                    numbers.push(resultOf((a, b) -> a - b, numbers));
+                    numbers.push(resultOf(subtraction, numbers));
                     break;
                 case "*":
-                    numbers.push(resultOf((a, b) -> a * b, numbers));
+                    numbers.push(resultOf(multiplication, numbers));
                     break;
                 case "/":
-                    numbers.push(resultOf((a, b) -> a / b, numbers));
+                    numbers.push(resultOf(division, numbers));
                     break;
                 default:
                     numbers.push(Double.parseDouble(token));

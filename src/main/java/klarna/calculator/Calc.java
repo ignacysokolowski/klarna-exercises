@@ -10,16 +10,22 @@ public class Calc {
         }
         Stack<Double> numbers = new Stack<>();
         for (String token : expression.split(" ")) {
-            if (token.equals("+")) {
-                numbers.push(resultOf((a, b) -> a + b, numbers));
-            } else if (token.equals("-")) {
-                numbers.push(resultOf((a, b) -> a - b, numbers));
-            } else if (token.equals("*")) {
-                numbers.push(resultOf((a, b) -> a * b, numbers));
-            } else if (token.equals("/")) {
-                numbers.push(resultOf((a, b) -> a / b, numbers));
-            } else {
-                numbers.push(Double.parseDouble(token));
+            switch (token) {
+                case "+":
+                    numbers.push(resultOf((a, b) -> a + b, numbers));
+                    break;
+                case "-":
+                    numbers.push(resultOf((a, b) -> a - b, numbers));
+                    break;
+                case "*":
+                    numbers.push(resultOf((a, b) -> a * b, numbers));
+                    break;
+                case "/":
+                    numbers.push(resultOf((a, b) -> a / b, numbers));
+                    break;
+                default:
+                    numbers.push(Double.parseDouble(token));
+                    break;
             }
         }
         return numbers.pop();

@@ -11,14 +11,11 @@ public class Calc {
             return 0;
         }
         Stack<Double> numbers = new Stack<>();
-        DoubleBinaryOperator subtraction = (a, b) -> a - b;
-        DoubleBinaryOperator multiplication = (a, b) -> a * b;
-        DoubleBinaryOperator division = (a, b) -> a / b;
         Map<String, DoubleBinaryOperator> operators = new HashMap<String, DoubleBinaryOperator>() {{
             put("+", (a, b) -> a + b);
-            put("-", subtraction);
-            put("*", multiplication);
-            put("/", division);
+            put("-", (a, b) -> a - b);
+            put("*", (a, b) -> a * b);
+            put("/", (a, b) -> a / b);
         }};
         for (String token : expression.split(" ")) {
             switch (token) {

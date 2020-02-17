@@ -15,18 +15,15 @@ public class CalculateTests {
     public void expressionsWithoutOperatorsEvaluateToTheLastNumber() {
         assertEquals(3, calculator.evaluate("3"), 0);
         assertEquals(2, calculator.evaluate("3 2"), 0);
-    }
-
-    // Acceptance tests
-    @Test
-    public void shouldParseNumbers() {
         assertEquals(3, calculator.evaluate("1 2 3"), 0);
     }
 
     @Test
-    public void shouldParseFloats() {
+    public void parsesFloats() {
         assertEquals(3.5, calculator.evaluate("1 2 3.5"), 0);
     }
+
+    // Acceptance tests
 //
 //    @Test
 //    public void shouldSupportAddition() {

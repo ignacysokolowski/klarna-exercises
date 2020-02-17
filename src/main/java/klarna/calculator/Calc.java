@@ -10,7 +10,8 @@ public class Calc {
         Stack<Double> numbers = new Stack<>();
         for (String token : expression.split(" ")) {
             if (token.equals("+")) {
-                numbers.push(1.0 + 3.0);
+                double operand2 = 3.0;
+                numbers.push(1.0 + operand2);
             } else {
                 numbers.push(Double.parseDouble(token));
             }

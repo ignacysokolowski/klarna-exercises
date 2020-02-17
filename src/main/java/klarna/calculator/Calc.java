@@ -17,15 +17,14 @@ public class Calc {
         Map<String, DoubleBinaryOperator> operators = new HashMap<String, DoubleBinaryOperator>() {{
             put("+", (a, b) -> a + b);
             put("-", subtraction);
+            put("*", multiplication);
         }};
         for (String token : expression.split(" ")) {
             switch (token) {
                 case "+":
                 case "-":
-                    numbers.push(resultOf(operators.get(token), numbers));
-                    break;
                 case "*":
-                    numbers.push(resultOf(multiplication, numbers));
+                    numbers.push(resultOf(operators.get(token), numbers));
                     break;
                 case "/":
                     numbers.push(resultOf(division, numbers));

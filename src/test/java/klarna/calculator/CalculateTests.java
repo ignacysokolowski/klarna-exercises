@@ -18,10 +18,10 @@ public class CalculateTests {
     }
 
     // Acceptance tests
-//    @Test
-//    public void shouldParseNumbers() {
-//        assertEquals(3, calculator.evaluate("1 2 3"), 0);
-//    }
+    @Test
+    public void shouldParseNumbers() {
+        assertEquals(3, calculator.evaluate("1 2 3"), 0);
+    }
 //
 //    @Test
 //    public void shouldParseFloats() {

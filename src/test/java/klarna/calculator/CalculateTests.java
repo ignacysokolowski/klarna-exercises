@@ -27,6 +27,7 @@ public class CalculateTests {
     public void supportsAddition() {
         assertEquals(4, calculator.evaluate("1 3 +"), 0);
         assertEquals(3, calculator.evaluate("1 2 +"), 0);
+        assertEquals(5, calculator.evaluate("2 3 +"), 0);
     }
 
     // Acceptance tests

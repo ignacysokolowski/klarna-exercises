@@ -11,7 +11,7 @@ public class Calc {
         for (String token : expression.split(" ")) {
             if (token.equals("+")) {
                 double operand2 = numbers.pop();
-                double operand1 = 1.0;
+                double operand1 = numbers.pop();
                 numbers.push(operand1 + operand2);
             } else {
                 numbers.push(Double.parseDouble(token));

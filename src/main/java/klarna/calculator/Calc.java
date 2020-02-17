@@ -27,13 +27,11 @@ public class Calc {
 
     public double nextNumber(Stack<Double> numbers, String token) {
         DoubleBinaryOperator operator = operators.get(token);
-        double nextNumber;
         if (operator == null) {
-            nextNumber = Double.parseDouble(token);
+            return Double.parseDouble(token);
         } else {
-            nextNumber = resultOf(operator, numbers);
+            return resultOf(operator, numbers);
         }
-        return nextNumber;
     }
 
     private double resultOf(DoubleBinaryOperator operator, Stack<Double> numbers) {

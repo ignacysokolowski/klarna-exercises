@@ -18,16 +18,15 @@ public class Calc {
             put("+", (a, b) -> a + b);
             put("-", subtraction);
             put("*", multiplication);
+            put("/", division);
         }};
         for (String token : expression.split(" ")) {
             switch (token) {
                 case "+":
                 case "-":
                 case "*":
-                    numbers.push(resultOf(operators.get(token), numbers));
-                    break;
                 case "/":
-                    numbers.push(resultOf(division, numbers));
+                    numbers.push(resultOf(operators.get(token), numbers));
                     break;
                 default:
                     numbers.push(Double.parseDouble(token));

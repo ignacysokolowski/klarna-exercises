@@ -21,11 +21,13 @@ public class Calc {
         Stack<Double> numbers = new Stack<>();
         for (String token : expression.split(" ")) {
             DoubleBinaryOperator operator = operators.get(token);
+            double nextNumber;
             if (operator == null) {
-                numbers.push(Double.parseDouble(token));
+                nextNumber = Double.parseDouble(token);
             } else {
-                numbers.push(resultOf(operator, numbers));
+                nextNumber = resultOf(operator, numbers);
             }
+            numbers.push(nextNumber);
         }
         return numbers.pop();
     }

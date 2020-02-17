@@ -23,9 +23,13 @@ public class Calc {
         return numbers.pop();
     }
 
-    public void pushOperation(Stack<Double> numbers, DoubleBinaryOperator operator) {
+    private void pushOperation(Stack<Double> numbers, DoubleBinaryOperator operator) {
+        numbers.push(operation(numbers, operator));
+    }
+
+    private double operation(Stack<Double> numbers, DoubleBinaryOperator operator) {
         double operand2 = numbers.pop();
         double operand1 = numbers.pop();
-        numbers.push(operator.applyAsDouble(operand1, operand2));
+        return operator.applyAsDouble(operand1, operand2);
     }
 }
